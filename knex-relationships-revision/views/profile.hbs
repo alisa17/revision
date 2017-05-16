@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Profile of user {{user_id}}</title>
+</head>
+
+<body>
+  <p>User: {{user.user_id}}</p>
+  <p>Name: {{user.name}}</p>
+  <img src="/{{user.profile_picture}}">
+
+<h2>Blogs by user:</h2>
+<ul>
+  {{#each posts}}
+    <li> <a href="/profile/{{user_id}}/posts/id">{{title}}</a>  posted on {{post_created_at}}</li>
+  {{/each}}
+</ul>
+
+
+  <form action="/profile/{{user_id}}/addPost" method="post">
+    Title:<br>
+    <input type="text" name="name"><br>
+     Content:<br>
+    <input type="text" name="email"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+
+
+
+
+
+
+</body>
+
+</html>

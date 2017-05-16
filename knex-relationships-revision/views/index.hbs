@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>EDA Phase 1 Express Boilerplate</title>
+</head>
+
+<body>
+  <ul>
+    {{#each users}}
+      <li> <a href="profile/{{id}}"> {{name}}</a> ({{email}})</li>
+    {{/each}}
+  </ul>
+<h3>Add user</h3>
+  <form action="/addUser" method="post">
+    Name:<br>
+    <input type="text" name="name"><br>
+     Email:<br>
+    <input type="text" name="email"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+
+
+
+
+</body>
+
+</html>
